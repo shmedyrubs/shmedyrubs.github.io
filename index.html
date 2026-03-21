@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Dash — Growing Small Businesses Through Online Advertising</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; letter-spacing: -0.02em; }
+    .glow-hero {
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(62, 138, 200, 0.28) 0%, transparent 70%);
+    }
+    .glow-cta {
+      background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(62, 138, 200, 0.22) 0%, transparent 70%);
+    }
+    .card-border {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #7BB3D9 0%, #3E8AC8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .bar-fill {
+      height: 4px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #3E8AC8, #7BB3D9);
+    }
+    .btn-primary {
+      background-color: #3E8AC8;
+      transition: background-color 0.15s;
+    }
+    .btn-primary:hover { background-color: #2d6fa0; }
+  </style>
+</head>
+<body class="bg-[#111111] text-white min-h-screen antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-16 py-4 border-b border-white/[0.06] backdrop-blur-md bg-[#111111]/80">
+    <span class="font-display font-light text-xl text-white tracking-tight leading-none">Digital Dash</span>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Services</a>
+      <a href="#work" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Featured Products</a>
+      <a href="#apply" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Contact</a>
+    </div>
+    <a href="tel:6479498219" class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-md">
+      Contact
+    </a>
+  </nav>
+
+  <!-- =========================================================
+       HERO SECTION
+  ========================================================= -->
+  <section class="relative flex flex-col items-center justify-center text-center px-6 pt-32 pb-0 overflow-hidden min-h-[100vh]">
+    <!-- Background glow -->
+    <div class="glow-hero absolute inset-0 pointer-events-none"></div>
+
+    <!-- Wave gradient brand image — decorative top-right -->
+    <div class="absolute top-0 right-0 w-[420px] h-[560px] opacity-[0.12] pointer-events-none overflow-hidden">
+      <img src="assets/brand-img-0-0.jpeg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#111111]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#111111]"></div>
+    </div>
+
+    <!-- Badge -->
+    <div class="relative flex items-center gap-2 bg-white/[0.06] border border-white/10 rounded-full px-4 py-1.5 mb-8">
+      <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#F4C430"></span>
+      <span class="text-xs text-zinc-400 tracking-wide">Meta & Google Certified Agency</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="relative text-5xl md:text-7xl tracking-tight text-white max-w-4xl leading-[1.15] mb-6">
+      Grow your service<br>
+      <em class="not-italic text-gradient">business online</em>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="relative text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mb-8" style="font-family:'Inter',sans-serif; font-weight:400; letter-spacing:0;">
+      We build high-converting landing pages and drive qualified leads through Meta and Google Ads — so you can focus on your craft.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="relative flex flex-col sm:flex-row gap-3 mb-3">
+      <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})" class="btn-primary text-white font-medium px-6 py-3 rounded-md text-sm" style="box-shadow:0 8px 24px rgba(62,138,200,0.25);">
+        Contact Us
+      </button>
+      <button onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})" class="bg-white/[0.06] hover:bg-white/10 border border-white/10 text-white font-medium px-6 py-3 rounded-md transition-colors text-sm">
+        See Our Work
+      </button>
+    </div>
+    <p class="relative text-xs text-zinc-600 mb-16" style="font-family:'Inter',sans-serif;">No commitment required. We'll see if we're a good fit.</p>
+
+    <!-- Hero Dashboard Mockup -->
+    <div class="relative w-full max-w-4xl mx-auto">
+      <!-- Fade overlay at bottom -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none" style="background:linear-gradient(to top,#111111,transparent)"></div>
+
+      <div class="hidden md:grid grid-cols-3 gap-3 mb-3">
+        <!-- Stats card -->
+        <div class="card-border rounded-xl p-5 text-left" style="background:#181818">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-5 h-5 rounded flex items-center justify-center" style="background:rgba(62,138,200,0.25)">
+              <svg class="w-3 h-3" style="color:#3E8AC8" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="text-[10px] text-zinc-500 uppercase tracking-wider">Meta Ads</span>
+          </div>
+          <div class="text-3xl font-bold text-white mb-0.5">4.2x</div>
+          <div class="text-xs text-zinc-500 mb-4" style="font-family:'Inter',sans-serif;">Return on ad spend</div>
+          <div class="space-y-2.5">
+            <div>
+              <div class="flex justify-between text-[11px] mb-1" style="font-family:'Inter',sans-serif;">
+                <span class="text-zinc-500">Impressions</span>
+                <span class="text-zinc-300">142K</span>
+              </div>
+              <div class="bg-white/5 rounded-full h-1"><div class="bar-fill" style="width:78%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] mb-1" style="font-family:'Inter',sans-serif;">
+                <span class="text-zinc-500">Clicks</span>
+                <span class="text-zinc-300">3,840</span>
+              </div>
+              <div class="bg-white/5 rounded-full h-1"><div class="bar-fill" style="width:52%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-[11px] mb-1" style="font-family:'Inter',sans-serif;">
+                <span class="text-zinc-500">Leads</span>
+                <span class="font-medium" style="color:#3E8AC8">284</span>
+              </div>
+              <div class="bg-white/5 rounded-full h-1"><div class="bar-fill" style="width:36%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Landing page preview -->
+        <div class="card-border rounded-xl col-span-2 overflow-hidden" style="background:#181818">
+          <div class="flex items-center gap-1.5 px-4 py-3 border-b border-white/[0.06]">
+            <div class="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-green-500/70"></div>
+            <div class="flex-1 mx-3 bg-white/5 rounded text-[10px] text-zinc-600 px-3 py-1 text-center" style="font-family:'Inter',sans-serif;">eliteroofing.com</div>
+          </div>
+          <img src="https://placehold.co/700x220/181818/222222?text=Landing+Page+Preview" class="w-full h-[210px] object-cover" alt="Landing page preview">
+        </div>
+      </div>
+
+      <!-- Bottom stat cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="card-border rounded-xl p-4 text-left" style="background:#181818">
+          <div class="text-[10px] text-zinc-500 uppercase tracking-wider mb-2" style="font-family:'Inter',sans-serif;">Leads / mo</div>
+          <div class="text-xl font-bold text-white">127</div>
+          <div class="text-[11px] mt-1" style="color:#4ade80;font-family:'Inter',sans-serif;">↑ 34%</div>
+        </div>
+        <div class="card-border rounded-xl p-4 text-left" style="background:#181818">
+          <div class="text-[10px] text-zinc-500 uppercase tracking-wider mb-2" style="font-family:'Inter',sans-serif;">Cost / Lead</div>
+          <div class="text-xl font-bold text-white">$8.40</div>
+          <div class="text-[11px] mt-1" style="color:#4ade80;font-family:'Inter',sans-serif;">↓ 18%</div>
+        </div>
+        <div class="card-border rounded-xl p-4 text-left" style="background:#181818">
+          <div class="text-[10px] text-zinc-500 uppercase tracking-wider mb-2" style="font-family:'Inter',sans-serif;">Conv. Rate</div>
+          <div class="text-xl font-bold text-white">7.3%</div>
+          <div class="text-[11px] mt-1" style="color:#4ade80;font-family:'Inter',sans-serif;">↑ 2.1%</div>
+        </div>
+        <div class="card-border rounded-xl p-4 text-left" style="background:#181818">
+          <div class="text-[10px] text-zinc-500 uppercase tracking-wider mb-2" style="font-family:'Inter',sans-serif;">Ad Spend</div>
+          <div class="text-xl font-bold text-white">$1,067</div>
+          <div class="text-[11px] text-zinc-600 mt-1" style="font-family:'Inter',sans-serif;">On track</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TRUSTED BY BAR
+  ========================================================= -->
+  <div class="border-y border-white/[0.06] py-8 px-6 mt-16">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-center text-[11px] text-zinc-600 uppercase tracking-widest mb-6" style="font-family:'Inter',sans-serif;">Trusted by service businesses across industries</p>
+      <div class="flex flex-wrap items-center justify-center gap-3 md:gap-8">
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">Roofing</span>
+        <span class="text-zinc-800 hidden md:block">·</span>
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">HVAC</span>
+        <span class="text-zinc-800 hidden md:block">·</span>
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">Plumbing</span>
+        <span class="text-zinc-800 hidden md:block">·</span>
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">Landscaping</span>
+        <span class="text-zinc-800 hidden md:block">·</span>
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">Cleaning</span>
+        <span class="text-zinc-800 hidden md:block">·</span>
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">Electrical</span>
+        <span class="text-zinc-800 hidden md:block">·</span>
+        <span class="text-sm font-medium text-zinc-600" style="font-family:'Inter',sans-serif;">Contracting</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       WHAT WE DO SECTION
+  ========================================================= -->
+  <section id="services" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl tracking-tight mb-4">
+          Growing your business<br>
+          <span class="text-zinc-500">is simple.</span>
+        </h2>
+        <p class="text-zinc-500 text-lg max-w-xl mx-auto leading-relaxed" style="font-family:'Inter',sans-serif;">
+          We handle your complete online advertising system — from building your landing page to managing your ad campaigns every week.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <!-- Card 1: Landing Pages -->
+        <div class="card-border rounded-xl p-6" style="background:#181818">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background:rgba(62,138,200,0.15);border:1px solid rgba(62,138,200,0.25)">
+            <svg class="w-5 h-5" style="color:#3E8AC8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="text-[11px] text-zinc-600 uppercase tracking-widest mb-2" style="font-family:'Inter',sans-serif;">Step 01</div>
+          <h3 class="text-white text-xl mb-3">Landing Page Design</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">
+            We design and build a custom, high-converting landing page for your service. Optimized for speed, mobile, and turning visitors into leads.
+          </p>
+        </div>
+
+        <!-- Card 2: Meta & Google Ads (combined) -->
+        <div class="card-border rounded-xl p-6" style="background:#181818">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background:rgba(244,196,48,0.12);border:1px solid rgba(244,196,48,0.25)">
+            <svg class="w-5 h-5" style="color:#F4C430" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div class="text-[11px] text-zinc-600 uppercase tracking-widest mb-2" style="font-family:'Inter',sans-serif;">Step 02</div>
+          <h3 class="text-white text-xl mb-3">Meta & Google Ads</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">
+            We run targeted campaigns on both Facebook/Instagram and Google Search — reaching homeowners who are scrolling their feed and those actively searching for your service.
+          </p>
+        </div>
+
+        <!-- Card 3: Monthly Email Reports -->
+        <div class="card-border rounded-xl p-6" style="background:#181818">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-5" style="background:rgba(62,138,200,0.15);border:1px solid rgba(62,138,200,0.25)">
+            <svg class="w-5 h-5" style="color:#3E8AC8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="text-[11px] text-zinc-600 uppercase tracking-widest mb-2" style="font-family:'Inter',sans-serif;">Step 03</div>
+          <h3 class="text-white text-xl mb-3">Monthly Email Reports</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">
+            Every month you receive a detailed email breaking down your results — leads generated, cost per lead, ad spend, and every change we made to your campaign setup that month.
+          </p>
+        </div>
+      </div>
+
+      <!-- Process bottom row with poster wall image -->
+      <div class="card-border rounded-xl overflow-hidden" style="background:#181818">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <!-- Image side -->
+          <div class="relative h-56 md:h-auto overflow-hidden">
+            <img src="assets/brand-img-0-1.jpeg" class="w-full h-full object-cover" alt="Advertising in the real world">
+            <div class="absolute inset-0" style="background:linear-gradient(to right, transparent 40%, #181818)"></div>
+            <div class="absolute inset-0" style="background:rgba(17,17,17,0.35)"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-xs uppercase tracking-widest px-3 py-1 rounded-full" style="background:rgba(62,138,200,0.15);border:1px solid rgba(62,138,200,0.3);color:#3E8AC8;font-family:'Inter',sans-serif;">Real-World Reach</span>
+            </div>
+          </div>
+          <!-- Text side -->
+          <div class="p-7 flex flex-col gap-6">
+            <div class="pb-6 border-b border-white/[0.06]">
+              <div class="text-[11px] text-zinc-600 uppercase tracking-widest mb-2" style="font-family:'Inter',sans-serif;">Ongoing</div>
+              <h3 class="text-white text-lg mb-2">Weekly Optimization & Reporting</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">We analyze your campaigns every week, adjust targeting and budgets to keep your cost-per-lead dropping.</p>
+            </div>
+            <div class="pb-6 border-b border-white/[0.06]">
+              <div class="text-[11px] text-zinc-600 uppercase tracking-widest mb-2" style="font-family:'Inter',sans-serif;">Always On</div>
+              <h3 class="text-white text-lg mb-2">Real-Time Lead Notifications</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">Every new lead is sent directly to your phone via text and email — so you never miss a customer.</p>
+            </div>
+            <div>
+              <div class="text-[11px] text-zinc-600 uppercase tracking-widest mb-2" style="font-family:'Inter',sans-serif;">Transparent</div>
+              <h3 class="text-white text-lg mb-2">Monthly Performance Dashboard</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed" style="font-family:'Inter',sans-serif;">A clear dashboard showing exactly how your budget is spent and what results it's producing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TESTIMONIAL — with motion blur people background
+  ========================================================= -->
+  <div class="relative py-24 px-6 overflow-hidden border-y border-white/[0.06]">
+    <!-- Background image -->
+    <div class="absolute inset-0 pointer-events-none">
+      <img src="assets/brand-img-0-2.jpeg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0" style="background:rgba(17,17,17,0.88)"></div>
+    </div>
+    <div class="max-w-2xl mx-auto text-center relative">
+      <div class="flex items-center justify-center gap-1 mb-6">
+        <span class="text-xl" style="color:#F4C430">★</span>
+        <span class="text-xl" style="color:#F4C430">★</span>
+        <span class="text-xl" style="color:#F4C430">★</span>
+        <span class="text-xl" style="color:#F4C430">★</span>
+        <span class="text-xl" style="color:#F4C430">★</span>
+      </div>
+      <p class="text-white text-xl md:text-2xl font-medium leading-relaxed mb-8" style="font-family:'Inter',sans-serif;">
+        "Digital Dash completely <em class="text-gradient not-italic">transformed</em> the way I get new customers. Within 30 days we had more leads than we knew what to do with."
+      </p>
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background:#3E8AC8">MJ</div>
+        <div class="text-left">
+          <div class="text-sm font-medium text-white" style="font-family:'Inter',sans-serif;">Marcus Johnson</div>
+          <div class="text-xs text-zinc-500" style="font-family:'Inter',sans-serif;">Owner, Johnson Roofing · Dallas, TX</div>
+        </div>
+      </div>
+      <div class="mt-8 flex items-center justify-center gap-6 text-xs text-zinc-700" style="font-family:'Inter',sans-serif;">
+        <span>Roofing</span><span>·</span><span>HVAC</span><span>·</span><span>Plumbing</span><span>·</span><span>Landscaping</span><span>·</span><span>Cleaning</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       FEATURED LANDING PAGES — CAROUSEL
+  ========================================================= -->
+  <section id="work" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+        <div>
+          <h2 class="text-4xl md:text-5xl tracking-tight mb-3">
+            Featured<br>
+            <span class="text-zinc-500">landing pages.</span>
+          </h2>
+          <p class="text-zinc-500 text-base max-w-md leading-relaxed" style="font-family:'Inter',sans-serif;">
+            High-converting pages we've built for service businesses just like yours.
+          </p>
+        </div>
+        <!-- Arrow buttons top-right -->
+        <div class="flex items-center gap-3 mt-6 md:mt-0">
+          <button id="lp-prev" class="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:border-white/30 transition-all">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="lp-next" class="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:border-white/30 transition-all">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <span id="lp-counter" class="text-sm text-zinc-600 ml-1" style="font-family:'Inter',sans-serif;">1 / 5</span>
+        </div>
+      </div>
+
+      <!-- Carousel viewport -->
+      <div class="overflow-hidden rounded-2xl" id="lp-viewport">
+        <div id="lp-track" class="flex" style="transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);">
+
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0">
+            <div class="card-border rounded-2xl overflow-hidden" style="background:#181818">
+              <img src="https://placehold.co/1200x560/181818/222222?text=Elite+Roofing+Solutions" class="w-full object-cover" style="height:520px;" alt="Elite Roofing landing page">
+              <div class="p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full" style="background:rgba(62,138,200,0.15);color:#7BB3D9;border:1px solid rgba(62,138,200,0.2);font-family:'Inter',sans-serif;">Roofing</span>
+                  <h3 class="text-white text-2xl mt-3 mb-1">Elite Roofing Solutions</h3>
+                  <p class="text-zinc-500 text-sm" style="font-family:'Inter',sans-serif;">Dallas, TX</p>
+                </div>
+                <div class="flex gap-8">
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">142</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Leads / 30 days</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">$6.80</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Cost per lead</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light" style="color:#3E8AC8;font-family:'Plus Jakarta Sans',sans-serif;">4.1x</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">ROAS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0">
+            <div class="card-border rounded-2xl overflow-hidden" style="background:#181818">
+              <img src="https://placehold.co/1200x560/181818/222222?text=Arctic+Air+HVAC" class="w-full object-cover" style="height:520px;" alt="Arctic Air HVAC landing page">
+              <div class="p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full" style="background:rgba(244,196,48,0.12);color:#F4C430;border:1px solid rgba(244,196,48,0.25);font-family:'Inter',sans-serif;">HVAC</span>
+                  <h3 class="text-white text-2xl mt-3 mb-1">Arctic Air HVAC</h3>
+                  <p class="text-zinc-500 text-sm" style="font-family:'Inter',sans-serif;">Phoenix, AZ</p>
+                </div>
+                <div class="flex gap-8">
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">89</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Leads / 30 days</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">$9.20</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Cost per lead</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light" style="color:#3E8AC8;font-family:'Plus Jakarta Sans',sans-serif;">3.7x</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">ROAS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="w-full flex-shrink-0">
+            <div class="card-border rounded-2xl overflow-hidden" style="background:#181818">
+              <img src="https://placehold.co/1200x560/181818/222222?text=GreenScape+Pro" class="w-full object-cover" style="height:520px;" alt="GreenScape Pro landing page">
+              <div class="p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full" style="background:rgba(62,138,200,0.15);color:#7BB3D9;border:1px solid rgba(62,138,200,0.2);font-family:'Inter',sans-serif;">Landscaping</span>
+                  <h3 class="text-white text-2xl mt-3 mb-1">GreenScape Pro</h3>
+                  <p class="text-zinc-500 text-sm" style="font-family:'Inter',sans-serif;">Austin, TX</p>
+                </div>
+                <div class="flex gap-8">
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">203</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Leads / 45 days</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">$5.40</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Cost per lead</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light" style="color:#3E8AC8;font-family:'Plus Jakarta Sans',sans-serif;">5.2x</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">ROAS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="w-full flex-shrink-0">
+            <div class="card-border rounded-2xl overflow-hidden" style="background:#181818">
+              <img src="https://placehold.co/1200x560/181818/222222?text=FlowRight+Plumbing" class="w-full object-cover" style="height:520px;" alt="FlowRight Plumbing landing page">
+              <div class="p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full" style="background:rgba(62,138,200,0.15);color:#7BB3D9;border:1px solid rgba(62,138,200,0.2);font-family:'Inter',sans-serif;">Plumbing</span>
+                  <h3 class="text-white text-2xl mt-3 mb-1">FlowRight Plumbing</h3>
+                  <p class="text-zinc-500 text-sm" style="font-family:'Inter',sans-serif;">Houston, TX</p>
+                </div>
+                <div class="flex gap-8">
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">67</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Leads / 30 days</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">$11.20</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Cost per lead</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light" style="color:#3E8AC8;font-family:'Plus Jakarta Sans',sans-serif;">3.2x</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">ROAS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="w-full flex-shrink-0">
+            <div class="card-border rounded-2xl overflow-hidden" style="background:#181818">
+              <img src="https://placehold.co/1200x560/181818/222222?text=SparkClean+Services" class="w-full object-cover" style="height:520px;" alt="SparkClean Services landing page">
+              <div class="p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                  <span class="text-[11px] px-2 py-0.5 rounded-full" style="background:rgba(244,196,48,0.12);color:#F4C430;border:1px solid rgba(244,196,48,0.25);font-family:'Inter',sans-serif;">Cleaning</span>
+                  <h3 class="text-white text-2xl mt-3 mb-1">SparkClean Services</h3>
+                  <p class="text-zinc-500 text-sm" style="font-family:'Inter',sans-serif;">Toronto, ON</p>
+                </div>
+                <div class="flex gap-8">
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">118</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Leads / 30 days</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light text-white" style="font-family:'Plus Jakarta Sans',sans-serif;">$7.60</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">Cost per lead</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-light" style="color:#3E8AC8;font-family:'Plus Jakarta Sans',sans-serif;">4.4x</div>
+                    <div class="text-xs text-zinc-500 mt-1" style="font-family:'Inter',sans-serif;">ROAS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end track -->
+      </div><!-- end viewport -->
+
+      <!-- Dot indicators -->
+      <div class="flex justify-center gap-2 mt-6" id="lp-dots">
+        <button class="lp-dot w-2 h-2 rounded-full transition-all" style="background:#3E8AC8"></button>
+        <button class="lp-dot w-2 h-2 rounded-full transition-all" style="background:rgba(255,255,255,0.15)"></button>
+        <button class="lp-dot w-2 h-2 rounded-full transition-all" style="background:rgba(255,255,255,0.15)"></button>
+        <button class="lp-dot w-2 h-2 rounded-full transition-all" style="background:rgba(255,255,255,0.15)"></button>
+        <button class="lp-dot w-2 h-2 rounded-full transition-all" style="background:rgba(255,255,255,0.15)"></button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      const track = document.getElementById('lp-track');
+      const dots = document.querySelectorAll('.lp-dot');
+      const counter = document.getElementById('lp-counter');
+      const total = dots.length;
+      let current = 0;
+
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach(function(d, i) {
+          d.style.background = i === current ? '#3E8AC8' : 'rgba(255,255,255,0.15)';
+          d.style.width = i === current ? '20px' : '8px';
+          d.style.borderRadius = '4px';
+        });
+        counter.textContent = (current + 1) + ' / ' + total;
+      }
+
+      document.getElementById('lp-prev').addEventListener('click', function() { goTo(current - 1); });
+      document.getElementById('lp-next').addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+
+      // Init dot widths
+      dots.forEach(function(d) { d.style.borderRadius = '4px'; });
+      dots[0].style.width = '20px';
+    })();
+  </script>
+
+  <!-- =========================================================
+       WHAT CLIENTS ARE SAYING
+  ========================================================= -->
+  <div class="py-4 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl md:text-5xl tracking-tight text-center mb-12">
+        What clients<br>
+        <span class="text-zinc-500">are saying.</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card-border rounded-xl p-5" style="background:#181818">
+          <div class="flex gap-0.5 mb-3"><span class="text-sm" style="color:#F4C430">★★★★★</span></div>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">"Best investment I've made for my business. Leads started coming in within the first week. Highly recommend to any contractor."</p>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs text-white font-bold" style="background:#3E8AC8">TR</div>
+            <div>
+              <div class="text-xs font-medium text-white" style="font-family:'Inter',sans-serif;">Tom Reynolds</div>
+              <div class="text-[11px] text-zinc-600" style="font-family:'Inter',sans-serif;">Owner, Reynolds Roofing</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-border rounded-xl p-5" style="background:#181818">
+          <div class="flex gap-0.5 mb-3"><span class="text-sm" style="color:#F4C430">★★★★★</span></div>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">"We went from barely getting calls to booking out 3 weeks in advance. Digital Dash delivered real results, not just promises."</p>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs text-white font-bold" style="background:#2d6fa0">SC</div>
+            <div>
+              <div class="text-xs font-medium text-white" style="font-family:'Inter',sans-serif;">Sarah Chen</div>
+              <div class="text-[11px] text-zinc-600" style="font-family:'Inter',sans-serif;">Owner, Arctic Air HVAC</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-border rounded-xl p-5" style="background:#181818">
+          <div class="flex gap-0.5 mb-3"><span class="text-sm" style="color:#F4C430">★★★★★</span></div>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4" style="font-family:'Inter',sans-serif;">"The team is transparent and actually gets results. Our cost per lead dropped from $30 to under $8 in 60 days."</p>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs text-white font-bold" style="background:#3E8AC8">JM</div>
+            <div>
+              <div class="text-xs font-medium text-white" style="font-family:'Inter',sans-serif;">James Martinez</div>
+              <div class="text-[11px] text-zinc-600" style="font-family:'Inter',sans-serif;">Owner, GreenScape Pro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       CTA / APPLICATION SECTION
+  ========================================================= -->
+  <section id="apply" class="py-24 px-6 relative overflow-hidden">
+    <div class="glow-cta absolute inset-0 pointer-events-none"></div>
+    <!-- Wave gradient accent -->
+    <div class="absolute bottom-0 left-0 w-[340px] h-[440px] opacity-[0.08] pointer-events-none overflow-hidden">
+      <img src="assets/brand-img-0-0.jpeg" class="w-full h-full object-cover" alt="">
+      <div class="absolute inset-0" style="background:linear-gradient(to right,transparent,#111111)"></div>
+      <div class="absolute inset-0" style="background:linear-gradient(to top,transparent,#111111)"></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto text-center relative">
+      <h2 class="text-4xl md:text-6xl tracking-tight mb-4">
+        Ready to grow<br>
+        <em class="not-italic text-gradient">your business?</em>
+      </h2>
+      <p class="text-zinc-400 text-lg mb-10 leading-relaxed" style="font-family:'Inter',sans-serif;">
+        Tell us about your business and we'll reach out within 24 hours to see if we're a good fit.
+      </p>
+
+      <form action="https://formsubmit.co/ahmad.m0312@gmail.com" method="POST" class="card-border rounded-2xl p-7 md:p-9 text-left space-y-4" style="background:#181818">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="New Lead from Digital Dash Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Business Name</label>
+            <input type="text" name="Business Name" placeholder="e.g. Johnson Roofing" required class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none transition-all" style="background:rgba(255,255,255,0.04);font-family:'Inter',sans-serif;">
+          </div>
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Your Name</label>
+            <input type="text" name="Your Name" placeholder="First & last name" required class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none transition-all" style="background:rgba(255,255,255,0.04);font-family:'Inter',sans-serif;">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Service Type</label>
+          <select name="Service Type" class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-zinc-300 focus:outline-none transition-all appearance-none" style="background:#181818;font-family:'Inter',sans-serif;">
+            <option value="" style="background:#181818">Select your industry...</option>
+            <option style="background:#181818">Roofing</option>
+            <option style="background:#181818">HVAC</option>
+            <option style="background:#181818">Plumbing</option>
+            <option style="background:#181818">Landscaping</option>
+            <option style="background:#181818">Cleaning Services</option>
+            <option style="background:#181818">Electrical</option>
+            <option style="background:#181818">General Contracting</option>
+            <option style="background:#181818">Painting</option>
+            <option style="background:#181818">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Service Location</label>
+          <input type="text" name="Service Location" placeholder="e.g. Dallas, TX" class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none transition-all" style="background:rgba(255,255,255,0.04);font-family:'Inter',sans-serif;">
+        </div>
+
+        <div>
+          <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Monthly Ad Budget</label>
+          <select name="Monthly Ad Budget" class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-zinc-300 focus:outline-none transition-all appearance-none" style="background:#181818;font-family:'Inter',sans-serif;">
+            <option value="" style="background:#181818">Select a budget range...</option>
+            <option style="background:#181818">$500 – $1,000/mo</option>
+            <option style="background:#181818">$1,000 – $2,500/mo</option>
+            <option style="background:#181818">$2,500 – $5,000/mo</option>
+            <option style="background:#181818">$5,000+/mo</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Email Address</label>
+            <input type="email" name="Email" placeholder="you@example.com" required class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none transition-all" style="background:rgba(255,255,255,0.04);font-family:'Inter',sans-serif;">
+          </div>
+          <div>
+            <label class="block text-xs text-zinc-400 mb-1.5 font-medium" style="font-family:'Inter',sans-serif;">Phone Number</label>
+            <input type="tel" name="Phone" placeholder="(555) 000-0000" class="w-full border border-white/[0.08] rounded-lg px-4 py-2.5 text-sm text-white placeholder-zinc-600 focus:outline-none transition-all" style="background:rgba(255,255,255,0.04);font-family:'Inter',sans-serif;">
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="btn-primary w-full text-white font-medium py-3 rounded-lg text-sm" style="font-family:'Inter',sans-serif;box-shadow:0 8px 24px rgba(62,138,200,0.2);">
+            Submit Application →
+          </button>
+          <p class="text-center text-xs text-zinc-600 mt-3" style="font-family:'Inter',sans-serif;">We'll get back to you within 24 hours. No commitment required.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="border-t border-white/[0.06] py-10 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-display font-light text-lg text-white tracking-tight leading-none">Digital Dash</span>
+      <p class="text-xs text-zinc-700" style="font-family:'Inter',sans-serif;">© 2025 Digital Dash. Growing small businesses through online advertising.</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-xs text-zinc-700 hover:text-white transition-colors" style="font-family:'Inter',sans-serif;">Privacy</a>
+        <a href="#" class="text-xs text-zinc-700 hover:text-white transition-colors" style="font-family:'Inter',sans-serif;">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
