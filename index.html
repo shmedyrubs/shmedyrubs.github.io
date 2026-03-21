@@ -35,21 +35,96 @@
       transition: background-color 0.15s;
     }
     .btn-primary:hover { background-color: #2d6fa0; }
+
+    /* ── Nav scroll transform ── */
+    #main-nav {
+      transition: all 0.3s ease;
+    }
+    #main-nav.scrolled {
+      top: 8px;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: calc(100% - 48px);
+      max-width: 56rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(17,17,17,0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      border-bottom: none;
+    }
+
+    /* ── Mobile menu ── */
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem 1.5rem;
+      background: #181818;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    #mobile-menu.open { display: flex; }
+
+    /* ── Hero entrance animations ── */
+    @keyframes heroFadeUp {
+      from { opacity: 0; filter: blur(12px); transform: translateY(16px); }
+      to   { opacity: 1; filter: blur(0px);  transform: translateY(0);    }
+    }
+    .hero-anim {
+      opacity: 0;
+      animation: heroFadeUp 1s cubic-bezier(0.22,1,0.36,1) forwards;
+    }
+    .hero-anim-1 { animation-delay: 0.1s; }
+    .hero-anim-2 { animation-delay: 0.3s; }
+    .hero-anim-3 { animation-delay: 0.5s; }
+    .hero-anim-4 { animation-delay: 0.7s; }
+    .hero-anim-5 { animation-delay: 0.9s; }
+    .hero-anim-6 { animation-delay: 1.1s; }
+
+    /* ── Scroll-reveal for sections ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body class="bg-[#111111] text-white min-h-screen antialiased">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-16 py-4 border-b border-white/[0.06] backdrop-blur-md bg-[#111111]/80">
-    <span class="font-display font-light text-xl text-white tracking-tight leading-none">Digital Dash</span>
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#services" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Services</a>
-      <a href="#work" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Featured Products</a>
-      <a href="#apply" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Contact</a>
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-[#111111]/80 backdrop-blur-md border-b border-white/[0.06]">
+    <div class="flex items-center justify-between px-6 md:px-10 py-4">
+      <span class="font-display font-light text-xl text-white tracking-tight leading-none">Digital Dash</span>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Services</a>
+        <a href="#work" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Featured Products</a>
+        <a href="#apply" class="text-sm text-zinc-400 hover:text-white transition-colors duration-150">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="tel:6479498219" class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-md">
+          Contact
+        </a>
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5" aria-label="Open menu">
+          <span id="ham-1" class="block w-5 h-0.5 bg-white transition-all duration-200"></span>
+          <span id="ham-2" class="block w-5 h-0.5 bg-white transition-all duration-200"></span>
+          <span id="ham-3" class="block w-5 h-0.5 bg-white transition-all duration-200"></span>
+        </button>
+      </div>
     </div>
-    <a href="tel:6479498219" class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-md">
-      Contact
-    </a>
+    <!-- Mobile menu -->
+    <div id="mobile-menu">
+      <a href="#services" class="text-sm text-zinc-300 hover:text-white transition-colors" onclick="closeMobileMenu()">Services</a>
+      <a href="#work" class="text-sm text-zinc-300 hover:text-white transition-colors" onclick="closeMobileMenu()">Featured Products</a>
+      <a href="#apply" class="text-sm text-zinc-300 hover:text-white transition-colors" onclick="closeMobileMenu()">Contact</a>
+    </div>
   </nav>
 
   <!-- =========================================================
@@ -67,24 +142,24 @@
     </div>
 
     <!-- Badge -->
-    <div class="relative flex items-center gap-2 bg-white/[0.06] border border-white/10 rounded-full px-4 py-1.5 mb-8">
+    <div class="hero-anim hero-anim-1 relative flex items-center gap-2 bg-white/[0.06] border border-white/10 rounded-full px-4 py-1.5 mb-8">
       <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#F4C430"></span>
       <span class="text-xs text-zinc-400 tracking-wide">Meta & Google Certified Agency</span>
     </div>
 
     <!-- Headline -->
-    <h1 class="relative text-5xl md:text-7xl tracking-tight text-white max-w-4xl leading-[1.15] mb-6">
+    <h1 class="hero-anim hero-anim-2 relative text-5xl md:text-7xl tracking-tight text-white max-w-4xl leading-[1.15] mb-6">
       Grow your service<br>
       <em class="not-italic text-gradient">business online</em>
     </h1>
 
     <!-- Subtitle -->
-    <p class="relative text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mb-8" style="font-family:'Inter',sans-serif; font-weight:400; letter-spacing:0;">
+    <p class="hero-anim hero-anim-3 relative text-zinc-400 text-lg md:text-xl max-w-lg leading-relaxed mb-8" style="font-family:'Inter',sans-serif; font-weight:400; letter-spacing:0;">
       We build high-converting landing pages and drive qualified leads through Meta and Google Ads — so you can focus on your craft.
     </p>
 
     <!-- CTA Buttons -->
-    <div class="relative flex flex-col sm:flex-row gap-3 mb-3">
+    <div class="hero-anim hero-anim-4 relative flex flex-col sm:flex-row gap-3 mb-3">
       <button onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})" class="btn-primary text-white font-medium px-6 py-3 rounded-md text-sm" style="box-shadow:0 8px 24px rgba(62,138,200,0.25);">
         Contact Us
       </button>
@@ -92,7 +167,7 @@
         See Our Work
       </button>
     </div>
-    <p class="relative text-xs text-zinc-600 mb-16" style="font-family:'Inter',sans-serif;">No commitment required. We'll see if we're a good fit.</p>
+    <p class="hero-anim hero-anim-5 relative text-xs text-zinc-600 mb-16" style="font-family:'Inter',sans-serif;">No commitment required. We'll see if we're a good fit.</p>
 
     <!-- Hero Dashboard Mockup -->
     <div class="relative w-full max-w-4xl mx-auto">
@@ -202,7 +277,7 @@
   ========================================================= -->
   <section id="services" class="py-24 px-6">
     <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-16 reveal">
         <h2 class="text-4xl md:text-5xl tracking-tight mb-4">
           Growing your business<br>
           <span class="text-zinc-500">is simple.</span>
@@ -329,7 +404,7 @@
   ========================================================= -->
   <section id="work" class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 reveal">
         <div>
           <h2 class="text-4xl md:text-5xl tracking-tight mb-3">
             Featured<br>
@@ -597,7 +672,7 @@
       <div class="absolute inset-0" style="background:linear-gradient(to top,transparent,#111111)"></div>
     </div>
 
-    <div class="max-w-2xl mx-auto text-center relative">
+    <div class="max-w-2xl mx-auto text-center relative reveal">
       <h2 class="text-4xl md:text-6xl tracking-tight mb-4">
         Ready to grow<br>
         <em class="not-italic text-gradient">your business?</em>
@@ -718,6 +793,61 @@
         btn.textContent = 'Submit Application →';
       });
     });
+  </script>
+
+  <script>
+    // ── Nav scroll shrink ──
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // ── Mobile hamburger ──
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const ham1 = document.getElementById('ham-1');
+    const ham2 = document.getElementById('ham-2');
+    const ham3 = document.getElementById('ham-3');
+    let menuOpen = false;
+
+    hamburger.addEventListener('click', function() {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('open', menuOpen);
+      // Animate to X
+      if (menuOpen) {
+        ham1.style.transform = 'translateY(8px) rotate(45deg)';
+        ham2.style.opacity = '0';
+        ham3.style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        ham1.style.transform = '';
+        ham2.style.opacity = '';
+        ham3.style.transform = '';
+      }
+    });
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      ham1.style.transform = '';
+      ham2.style.opacity = '';
+      ham3.style.transform = '';
+    }
+
+    // ── Scroll reveal for sections ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el) { observer.observe(el); });
   </script>
 </body>
 </html>
